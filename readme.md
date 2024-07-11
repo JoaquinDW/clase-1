@@ -1,4 +1,4 @@
-# Lección 2: Introducción a Javascript
+# Lección 1: Introducción a Javascript
 
 En esta lección cubriremos:
 
