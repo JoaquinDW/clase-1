@@ -5,7 +5,9 @@ import {
   multiplicacion,
   iguales,
   calcularAreaTriangulo,
-  verificarEdad,
+  manipularObjetoBasico,
+  manipularArregloBasico,
+  splitString,
 } from ".."
 
 describe("Clase-1-Introduccion/homework", () => {
@@ -48,11 +50,29 @@ describe("Clase-1-Introduccion/homework", () => {
       expect(calcularAreaTriangulo(10, 10)).toBe(50)
     })
   })
-  describe("VerificarEdad", () => {
-    it("debería verificar la edad de una persona", () => {
-      expect(verificarEdad(17)).toBe("No puede entrar")
-      expect(verificarEdad(18)).toBe("Puede entrar")
-      expect(verificarEdad(19)).toBe("Puede entrar")
+  describe("manipularObjetoBasico", () => {
+    it("debería manipular un objeto básico en JavaScript", () => {
+      expect(manipularObjetoBasico()).toHaveProperty("categoria")
+      expect(manipularObjetoBasico()).not.toHaveProperty("cantidad")
+    })
+  })
+  describe("manipularArregloBasico", () => {
+    it("debería manipular un arreglo básico en JavaScript", () => {
+      expect(manipularArregloBasico()).toContain("manzana")
+      expect(manipularArregloBasico()).not.toContain("tomate")
+      expect(manipularArregloBasico()).toContain("uva")
+    })
+  })
+
+  describe("splitString", () => {
+    it("debería dividir un string en un arreglo", () => {
+      expect(splitString("hola mundo")).toEqual(["hola", "mundo"])
+      expect(splitString("hola mundo, como estas")).toEqual([
+        "hola",
+        "mundo,",
+        "como",
+        "estas",
+      ])
     })
   })
 })

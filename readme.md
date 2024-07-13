@@ -292,25 +292,97 @@ console.log(diferencia) // undefined
 
 Podemos ver que la diferencia se establece dentro de la función. La variable dentro de la función solo pertenece dentro de la función.
 
-## Control de flujo y operadores de comparación
+### Arreglos o Arrays
 
-En este ejemplo, vamos a utilizar operadores de control de flujo y comparación. El flujo de control ("control flow") es una forma de que nuestra función verifique si algo es `true`, y ya sea ejecutando el código suministrado si es así o avanzando si no lo es. Para esto usaremos la palabra clave `if`:
+Arreglos en JS (Arrays)
+
+Los arrays son estructuras de datos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.
+
+Se pueden crear o declarar de manera literal:
 
 ```javascript
-function puedeManejar(edad) {
-  if (edad > 18) {
-    return true
-  }
-
-  return false
-}
-
-puedeManejar(22) // true
+let animales = ["perro", "gato", "babosa ninja de borneo"]
+let numeros = [12, 2, 3.79]
 ```
 
-Aquí estamos tomando un número (`edad`) y verificando si la declaración es` true` (`22>18`), lo es, por lo que devolveremos` true`, y la función se detendrá. Si no es así, omitirá ese código y la función devolverá `false`.
+O bien con un constructor de arreglos
 
-El símbolo "mayor que" (`>`) que ve en el último ejemplo se llama _Operador de comparación_. Los operadores de comparación evalúan dos elementos y devuelven `verdadero` o` falso`. Estos operadores son: `<`, `<=`, `>`, `> =`, `===`, `! ==`. Aprenderemos más sobre estos operadores en la próxima lección.
+```javascript
+new Array("futbol", "golf", "basquet")
+```
+
+Podemos acceder a sus elementos a través de tu indice:
+
+```javascript
+let frutas = ["manzana", "banana"]
+console.log(frutas[0])
+// Manzana
+```
+
+### Objetos
+
+Introducción a objetos
+
+En JavaScript, un Objeto es una entidad independiente con Propiedades. A su vez, esas Propiedades tienen valores.
+
+Sintaxis:
+
+```javascript
+let objeto = {
+  clave1: "Valor1",
+  clave2: "Valor2",
+}
+```
+
+Las propiedades se escriben en formato key-value pair (en castellano, par clave-valor) y se separan con comas. El valor de cada clave puede ser cualquier tipo de dato, inclusive otros Objetos, Arreglos o Funciones.
+
+Cómo acceder a sus valores?
+
+Los valores guardados en los Objetos no tienen un orden (a diferencia de los Arreglos). Por lo tanto, no podemos acceder a ellos a través de un índice numérico.
+
+Bracket ([]) notation y Dot (".") notation son dos formas de acceder a propiedades de objetos en JavaScript. Ambas se utilizan para obtener el valor de una propiedad específica de un objeto
+
+Bracket Notation:
+Se utiliza para acceder a propiedades con cualquier tipo de cadena de texto, incluso si no es un identificador válido de JavaScript.
+
+Es útil para acceder a propiedades dinámicamente, es decir, cuando el nombre de la propiedad no se conoce hasta el momento de ejecución.
+También se puede utilizar para acceder a propiedades que tienen espacios o caracteres especiales en su nombre.
+
+El nombre de la propiedad de un objeto puede ser cualquier cadena válida de JavaScript, o cualquier cosa que se pueda convertir en una cadena, incluyendo una cadena vacía. Sin embargo, cualquier nombre de propiedad que no sea un identificador válido de JavaScript (por ejemplo, el nombre de alguna propiedad que tenga un espacio o un guión, o comience con un número) solo se puede acceder utilizando la notación de corchetes. Esta notación es muy útil también cuando los nombres de propiedades son determinados dinámicamente (cuando el nombre de la propiedad no se determina hasta el tiempo de ejecución). Ejemplos de esto se muestran a continuación:
+
+```javascript
+JavaScript
+let persona = {
+  "nombre completo": "Juan Pérez",
+  edad: 30,
+  profesión: "Desarrollador",
+}
+
+console.log(persona["nombre completo"]) // Imprime "Juan Pérez"
+console.log(persona["edad"]) // Imprime 30
+console.log(persona["profesión"]) // Imprime "Desarrollador"
+
+// Obtener el nombre de una propiedad dinámicamente
+let propiedad = "edad"
+console.log(persona[propiedad]) // Imprime 30
+```
+
+Dot Notation:
+Se utiliza para acceder a propiedades con nombres válidos como identificadores de JavaScript.
+Es más concisa y fácil de leer, especialmente para nombres de propiedades simples.
+Es la forma más común y recomendada para acceder a propiedades de objetos.
+
+```javascript
+let persona = {
+  nombre: "Juan",
+  edad: 30,
+  profesion: "Desarrollador",
+}
+
+console.log(persona.nombre) // Imprime "Juan"
+console.log(persona.edad) // Imprime 30
+console.log(persona.profesion) // Imprime "Desarrollador"
+```
 
 ## Abre la carpeta "homework" y completa la tarea descrita en el archivo index.js
 

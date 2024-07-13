@@ -33,24 +33,29 @@ export function calcularAreaTriangulo(base, altura) {
   // Psst: Como se calcula el area de un triangulo?
 }
 
-export function obtenerDatosUsuario() {
-  // Escribi aca el código para hacer una solicitud GET a una API de usuarios
-  // La URL de la API es 'https://jsonplaceholder.typicode.com/users/1'
-  // usa fetch para realizar la solicitud
-  // La función debe retornar una promesa que resuelva con los datos del usuario obtenidos
-  // o rechace con un mensaje de error en caso de fallo.
-  // Psst: No olvides que fetch retorna una promesa, ademas recuerda manejar los errores con .catch()
-}
-
-export function verificarEdad(edad) {
-  // Escribe aquí el código para verificar la edad de una persona
-  // Utiliza una estructura de control (if, switch) para imprimir un mensaje según la edad
-  // Ejemplo: "Puede entrar" si la edad es 18 o más, de lo contrario "No puede entrar"
-}
-
 export function manipularObjetoBasico() {
   // Escribe aquí el código para manipular un objeto básico en JavaScript
-  // Define un objeto llamado 'producto' con propiedades como nombre, precio, cantidad, etc.
-  // Realiza operaciones como modificar el precio del producto, agregar una nueva propiedad, etc.
+  // Tienes un objeto 'producto' con propiedades como nombre, precio, cantidad, etc.
+  // Realiza operaciones como agregar una nueva propiedad 'categoria' y eliminar la propiedad 'cantidad'
   // La función debe retornar el objeto modificado
+  let producto = {
+    nombre: "Producto",
+    precio: 100,
+    cantidad: 10,
+  }
+  // tu codigo
+  return producto
+}
+
+export function manipularArregloBasico() {
+  // Escribe aquí el código para manipular un arreglo básico en JavaScript
+  // Define un arreglo llamado 'frutas' con elementos como manzana, pera, banana, tomate.
+  // Realiza operaciones como agregar un nuevo elemento 'uva' y eliminar el elemento 'tomate'
+  // La función debe retornar el arreglo modificado
+}
+
+export function splitString(string) {
+  // Escribe aquí el código para dividir un string en un arreglo
+  // La función debe recibir un string y retornar un arreglo con cada palabra del string
+  // Psst: Recuerda que puedes usar el método split
 }
