@@ -1,5 +1,6 @@
-// Si bien todos los ejercicios tienen una descripcion,
-// Algunos ejercicios estan mas detallados en el archivo homework.md
+// Todos los ejercicios tienen su consigna,
+// si tienes alguna duda sobre el enunciado, no dudes en preguntar en el canal de Discord
+// Recuerda que puedes correr tus funciones con el comando `npm run test` para verificar si son correctas
 // Ademas tienes material de apoyo en el archivo README.md
 
 export function imprimirMensaje(mensaje) {
